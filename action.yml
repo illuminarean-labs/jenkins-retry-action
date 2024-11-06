@@ -1,0 +1,33 @@
+name: 'Jenkins Retry Action'
+description: 'Retry Jenkins Job when 404 error occurs'
+inputs:
+  jenkins-url:
+    description: 'Jenkins base URL'
+    required: true
+  jenkins-user:
+    description: 'Jenkins user'
+    required: true
+  jenkins-token:
+    description: 'Jenkins token'
+    required: true
+  jenkins-job:
+    description: 'Jenkins job name'
+    required: true
+  jenkins-parameters:
+    description: 'Jenkins job parameters'
+    required: false
+  max-retries:
+    description: 'Max retries'
+    required: false
+    default: '5'
+  retry-interval-secs:
+    description: 'Retry interval in seconds'
+    required: false
+    default: '60'
+
+branding:
+  icon: "check-circle"
+  color: "yellow"
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

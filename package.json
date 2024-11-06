@@ -1,0 +1,24 @@
+{
+  "name": "jenkins-retry-action",
+  "version": "1.0.0",
+  "description": "Jenkins Action Retries When 404 Occurs",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illuminarean-labs/jenkins-retry-action.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/illuminarean-labs/jenkins-retry-action/issues"
+  },
+  "homepage": "https://github.com/illuminarean-labs/jenkins-retry-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "axios": "^1.7.7"
+  }
+}
